@@ -1,0 +1,62 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<h1>first page</h1>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<main class="container-fluid">
+    <section class="row">
+    <section class="col-xl-4 col-lg-4 col-12 nplus1">
+        <ul class="list-group">
+            <li class="list-group-item bg-primary text-white text-center"><a class="text-white" href="">nPlus1<h2>
+        </h2></a></li>
+             <li class="list-group-item text-white bg-dark">Crasdsal justo odio</li>
+             <li class="list-group-item text-white bg-dark">Dapibus ac facilisis in</li>
+             <li class="list-group-item text-white bg-dark">Morbi leo risus</li>
+             <li class="list-group-item text-white bg-dark">Porta ac consectetur ac</li>
+             <li class="list-group-item text-white bg-dark">Vestibulum at eros</li>
+        </ul>
+    </section>
+    <section class="col-xl-4 col-12 col-lg-4 esquire">
+        <ul class="list-group">
+            <li class="list-group-item bg-primary text-white text-center"><a class="text-white" href="">esquire<h2>
+        </h2></a></li>
+            <li class="list-group-item bg-warning text-dark">Cras justo odio</li>
+            <li class="list-group-item bg-warning text-dark">Dapibus ac facilisis in</li>
+            <li class="list-group-item bg-warning text-dark">Morbi leo risus</li>
+            <li class="list-group-item bg-warning text-dark">Porta ac consectetur ac</li>
+            <li class="list-group-item bg-warning text-dark">Vestibulum at eros</li>
+        </ul>
+    </section>
+    <section class="col-xl-4 col-12 col-lg-4 tut">
+
+        <ul class="list-group">
+            <li class="list-group-item bg-primary text-white text-center"><a class="text-white" href="">tut<h2>
+        </h2></a></li>
+             <li class="list-group-item bg-secondary text-white">Cras justo odio</li>
+             <li class="list-group-item bg-secondary text-white">Dapibus ac facilisis in</li>
+             <li class="list-group-item bg-secondary text-white">Morbi leo risus</li>
+             <li class="list-group-item bg-secondary text-white">Porta ac consectetur ac</li>
+             <li class="list-group-item bg-secondary text-white">Vestibulum at eros</li>
+        </ul>
+    </section>
+        </section>
+</main>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
